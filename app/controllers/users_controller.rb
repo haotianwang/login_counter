@@ -99,8 +99,15 @@ class UsersController < ApplicationController
   end
   
   def add
-        respond_to do |format|
-            format.html { render action: "index"}
+        if request.method == "POST"
+            respond_to do |format|
+                format.html { render action: "add"}
+            end
+        end
+        if request.method == "GET"
+            respond_to do |format|
+                format.html { render action: "index"}
+            end
         end
   end
 end
