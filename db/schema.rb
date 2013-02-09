@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130207234703) do
 
-  create_table "user_models", :force => true do |t|
-    t.string   "name"
-    t.string   "password"
-    t.integer  "count"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "password"
