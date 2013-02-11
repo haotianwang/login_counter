@@ -2,10 +2,7 @@ LoginCounter::Application.routes.draw do
   post "testapi/resetFixture"
   post "testapi/unitTests"
   post "users/login"
-  get "users/add"
   post "users/add"
-
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
