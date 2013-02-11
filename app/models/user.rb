@@ -12,5 +12,14 @@ class User < ActiveRecord::Base
   def TESTAPI_resetFixture()
       return -1
   end
+  
+  def verifyString(str)
+      // 1 is valid
+      // -1 is too long
+      if str == nil || str == "" || str.length > 128
+        return -1
+      end
+      return 1
+  end
 
 end
