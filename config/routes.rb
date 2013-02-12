@@ -1,6 +1,6 @@
 LoginCounter::Application.routes.draw do
-  post "testapi/resetFixture"
-  post "testapi/unitTests"
+  post "TESTAPI/resetFixture"
+  post "TESTAPI/unitTests"
   post "users/login"
   post "users/add"
 

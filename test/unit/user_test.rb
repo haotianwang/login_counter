@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  
   test "resetFixture" do
   
     code = User.add("user1", "password") # add a user first so we have something to delete

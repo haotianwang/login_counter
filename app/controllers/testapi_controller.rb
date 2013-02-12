@@ -5,8 +5,13 @@ class TestapiController < ApplicationController
   end
 
   def unitTests
-    cmd = "pwd"
-    output = `#{cmd}`
-    render :json => { 'output' => output }
+    output = `rake db:migrate && rake db:test:prepare && ruby -Itest test/unit/user_test.rb`
+    lines = output.split(/\n/)
+    lastLine = lines[lines.length-1]
+    chunks = lastLine.split(",")
+    totalTests = Integer(chunks[0].gsub(" tests",""))
+    nrFailed = Integer(chunks[2].gsub(" failures",""))
+    #render :json => { 'output' => chunks }
+    render :json => { 'totalTests' => totalTests, 'nrFailed' => nrFailed, 'output' => output }
   end
 end
