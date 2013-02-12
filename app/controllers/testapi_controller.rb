@@ -1,7 +1,7 @@
 class TestapiController < ApplicationController
   def resetFixture
     result = User.TESTAPI_resetFixture()
-    render :json => { 'errCode' => result }
+    render :json => { "errCode" => result }
   end
 
   def unitTests
@@ -12,6 +12,6 @@ class TestapiController < ApplicationController
     totalTests = Integer(chunks[0].gsub(" tests",""))
     nrFailed = Integer(chunks[2].gsub(" failures",""))
     #render :json => { 'output' => chunks }
-    render :json => { 'totalTests' => totalTests, 'nrFailed' => nrFailed, 'output' => output }
+    render :json => { "totalTests" => totalTests, "nrFailed" => nrFailed, "output" => output }
   end
 end
