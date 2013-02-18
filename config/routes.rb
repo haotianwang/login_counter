@@ -1,4 +1,8 @@
 LoginCounter::Application.routes.draw do
+  root :to => 'users#index'
+  
+  get "users/index"
+  
   post "TESTAPI/resetFixture"
   post "TESTAPI/unitTests"
   post "users/login"
