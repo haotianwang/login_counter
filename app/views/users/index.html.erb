@@ -1,14 +1,19 @@
 <%= javascript_include_tag "users/index" %>
-<form onsubmit="return false;" style="text-align: center;">
+<form id="loginForm" onsubmit="return false;" style="text-align: center;">
     <h1 id="messageBox" >Please enter your credentials below</h1>
-		<div>
-			<input id="usernameInput" type="text" placeholder="Username" />
-		</div>
-		<div>
-			<input id="passwordInput" type="password" placeholder="Password" />
-		</div>
-		<div>
-			<input id="loginButton" type="submit" value="Log in" />
-            <input id="signupButton" type="submit" value="Sign up" />
+        <div id="loginFields">
+            <div>
+                <input id="usernameInput" type="text" placeholder="Username" />
+            </div>
+            <div>
+                <input id="passwordInput" type="password" placeholder="Password" />
+            </div>
+            <div>
+                <input id="loginButton" type="submit" value="Log in" />
+                <input id="signupButton" type="submit" value="Sign up" />
+            </div>
+        </div>
+        <div id="accountFields" style="display:none">
+            <input id="logoutButton" type="submit" value="Logout" />
         </div>
 </form>
