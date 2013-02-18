@@ -1,6 +1,6 @@
-{
-  'errCode' : <% if @errCode > 0 %> 1 <% else %> <%= @errCode %> <% end %>
-  <% if @errCode > 0 %>
-  'count' : <%= @errCode %>
-  <% end %>
+{ 
+    "errCode" : <% if @errCode > 0 %>1<% else %><%= @errCode %><% end %>
+    <% if @errCode > 0 %>,
+    "count" : <%= @errCode %>
+    <% end %>
 }
