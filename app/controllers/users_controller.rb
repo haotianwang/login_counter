@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  def index
+  end
+  
+  def account
+  end
+
   def login
     count = nil
     if request.method == "POST"
